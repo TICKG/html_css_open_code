@@ -1,0 +1,2302 @@
+/* Scss Document */
+
+@mixin sp {
+  @media screen and (max-width:768px) {
+    @content;
+  }
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Verdana,
+    Meiryo, "M+ 1p", sans-serif;
+  line-height: 1.6;
+  font-size: 62.5%;
+  margin: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+// header
+.header {
+  height: 108px;
+  border-bottom: 2px solid red;
+
+  &__ttl-area {
+    background: #eee;
+    position: relative;
+  }
+
+  &__ttl {
+    font-size: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 16px;
+  }
+
+  &__tel-area {
+    position: absolute;
+    top: 0px;
+    right: 260px;
+    text-align: right;
+  }
+
+  &__number {
+    font-size: 30px;
+    color: gray;
+
+    &::before {
+      display: block;
+      content: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/tel-mark.png);
+      position: absolute;
+      left: -28px;
+      top: 29%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__txt {
+    font-size: 12px;
+    color: #888;
+
+  }
+
+  &__btn {
+    position: absolute;
+    top: 16px;
+    right: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #ff5089;
+    padding: 10px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 0px rgba(188, 13, 53, 1);
+  }
+}
+
+// top-view
+.top-view {
+  background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-cover-pc.jpg);
+  background-size: cover;
+  height: 540px;
+
+  &__price-img {
+    position: relative;
+    top: 0px;
+    left: 240px;
+  }
+
+  &__woman-img {
+    position: relative;
+    top: 50px;
+    right: -180px;
+  }
+}
+
+// campaign
+.campaign {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+
+  &__txt-area {
+    max-width: 980px;
+    border: solid #eaeaea;
+    border-width: 0 6px 6px 6px;
+    margin: 0 auto;
+    padding: 30px;
+    font-size: 14px;
+    line-height: 20px;
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  &__txt-pink {
+    color: #ff5089;
+    padding-top: 10px;
+  }
+}
+
+// safety
+.safety {
+  text-align: center;
+  padding: 80px 0;
+
+  &__area {
+    max-width: 760px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-bottom: 30px;
+  }
+
+  &__ttl {
+    font-size: 26px;
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+    display: inline;
+    background: #ffffff;
+    padding: 0 10px;
+  }
+
+  &__txt {
+    font-size: 18px;
+  }
+
+  &__list {
+    max-width: 800px;
+  }
+
+  &__item {
+    max-width: 200px;
+    display: inline-block;
+    padding: 10px;
+
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+// lead
+.lead {
+  background: #eee;
+  text-align: center;
+  padding: 60px 0;
+  margin-bottom: 20px;
+
+  &__card {
+    max-width: 240px;
+    display: inline-block;
+    background: #ffffff;
+    padding: 20px;
+    margin: 8px;
+    height: 330px;
+    vertical-align: middle;
+
+    &:nth-child(1):before {
+      content: "";
+      width: 43px;
+      height: 46px;
+      display: block;
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-lead03.png)no-repeat;
+      background-size: 43px 32px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    &:nth-child(2):before {
+      content: "";
+      width: 22px;
+      height: 46px;
+      display: block;
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-lead01.png)no-repeat;
+      background-size: 22px 32px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    &:nth-child(3):before {
+      content: "";
+      width: 37px;
+      height: 46px;
+      display: block;
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-lead02.png)no-repeat;
+      background-size: 37px 32px;
+      position: relative;
+      margin: 0 auto;
+    }
+  }
+
+  &__ttl {
+    font-size: 20px;
+    font-weight: bold;
+
+    &:after {
+      content: "";
+      background: pink;
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin: 8px auto;
+    }
+  }
+
+  &__txt1 {
+    font-weight: bold;
+    font-size: 16px;
+    height: 80px;
+    margin: 10px 0;
+  }
+
+  &__txt2 {
+    font-size: 16px;
+    height: 80px;
+  }
+
+  &__txt2--small {
+    font-size: 12px;
+  }
+
+  span {
+    color: #ff5089;
+    font-weight: bold;
+  }
+}
+
+// probrem
+.probrem {
+  width: 100%;
+  height: 500px;
+  background: repeating-linear-gradient(-45deg, #eee, #eee 2px, #fff 4px);
+  position: relative;
+
+  &:after {
+    content: "";
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-filter.png)no-repeat center top;
+    height: 128px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+
+  &__list {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-problem.png) no-repeat center bottom;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    position: relative;
+    background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation-l.png),
+      url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation-r.png);
+    background-repeat: no-repeat;
+    background-position: left top,
+      right bottom;
+    background-size: 20px 26px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+
+    &:nth-child(1) {
+      top: 40px;
+      left: 40px;
+    }
+
+    &:nth-child(2) {
+      top: 60px;
+      right: -180px;
+    }
+
+    &:nth-child(3) {
+      top: 90px;
+      right: 120px;
+    }
+
+    &:nth-child(4) {
+      top: 80px;
+      right: -150px;
+    }
+
+    &:nth-child(5) {
+      top: 140px;
+      left: 0px;
+    }
+
+    &:nth-child(6) {
+      top: 100px;
+      left: 340px;
+    }
+  }
+
+  &__txt-pink {
+    color: #ff5089;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__txt {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__pic {
+    border: 1px solid #000;
+    text-align: center;
+  }
+}
+
+// リーズン01
+.reason {
+  &__number {
+    max-width: 100%;
+    height: 1px;
+    background: gray;
+    text-align: center;
+    margin: 100px 0;
+  }
+
+  &__number-icon {
+    max-width: 140px;
+    padding: 0 20px;
+    position: relative;
+    background: #ffffff;
+    top: -48px;
+  }
+
+  &__ttl-small {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    margin-top: 60px;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+
+    &:before,
+    &:after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 24px;
+      top: 44%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_l.png) no-repeat;
+      background-size: 16px 24px;
+      left: 450px;
+    }
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_r.png)no-repeat;
+      background-size: 16px 24px;
+      right: 460px;
+    }
+  }
+
+  &__01-txt {
+    font-size: 24px;
+    position: relative;
+    background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation02-l.png),
+      url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation02-r.png);
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-size: 15px 96px;
+    margin: 60px auto;
+    padding: 8px 48px;
+    width: 580px;
+
+    &--yellow {
+      background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+    }
+
+    &:before {
+      content: "";
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-check.png)no-repeat;
+      background-size: 50px 50px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+    }
+
+    &:after {
+      content: "";
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/img-reason01-lead.png)no-repeat;
+      background-size: 142px 104px;
+      display: block;
+      width: 142px;
+      height: 104px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 390px;
+    }
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+
+  &__center {
+    text-align: center;
+  }
+
+  &__ttl {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    // 3
+    &--pink {
+      color: #ff5089;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    // つ
+    &--pink-big {
+      font-weight: bold;
+      font-size: 46px;
+      color: #ff5089;
+      letter-spacing: -6px;
+    }
+  }
+
+  &__01-ttl {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  // カードエリア
+  &__card {
+    display: inline-block;
+    position: relative;
+    margin: 32px;
+    vertical-align: top;
+  }
+
+  &__pic-txt {
+    font-size: 20px;
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 32px;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    &--newline {
+      position: relative;
+      top: 30px;
+      left: -50px;
+    }
+
+    &--move {
+      left: 256px;
+    }
+  }
+
+  &__box {
+    border: 1px solid #000;
+    max-width: 460px;
+    height: 350px;
+    padding: 3px;
+    text-align: left;
+  }
+
+  &__box-ttl {
+    font-size: 30px;
+    background: pink;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+
+    &--pink {
+      font-weight: bold;
+      color: #ff5089;
+    }
+
+    &--small {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  &__box-txt {
+    border-top: 1px solid #000;
+    font-size: 18px;
+    padding: 16px 0px;
+    margin: 0 30px;
+
+    &--border {
+      border-top: 1px solid #000;
+      width: 84%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &--yellow {
+      background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+    }
+  }
+
+  &__table {
+    padding: 16px;
+    margin: 16px auto;
+    width: 84%;
+
+  }
+
+  &__table-row {
+    border-bottom: 1px solid #595959;
+  }
+
+  &__table-row:last-child {
+    border-bottom: none;
+
+  }
+
+  &__table-data {
+    padding: 3px;
+    width: 30px;
+    height: 25px;
+    border-right: 1px dotted #595959;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  &__table-data:nth-child(even) {
+    border-right: none;
+  }
+}
+
+// reason2
+.reason2 {
+  &__number {
+    max-width: 100%;
+    height: 1px;
+    background: gray;
+    text-align: center;
+    margin: 100px 0;
+  }
+
+  &__number-icon {
+    max-width: 140px;
+    padding: 0 20px;
+    position: relative;
+    background: #ffffff;
+    top: -48px;
+  }
+
+  &__ttl1 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    margin-top: 60px;
+
+    &--pink {
+      font-size: 56px;
+      color: #ff5089;
+      font-weight: bold;
+    }
+
+    &:before,
+    &:after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 24px;
+      top: 44%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_l.png) no-repeat;
+      background-size: 16px 24px;
+      left: 450px;
+    }
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_r.png)no-repeat;
+      background-size: 16px 24px;
+      right: 454px;
+    }
+  }
+
+  &__read {
+    font-size: 24px;
+    position: relative;
+    font-weight: bold;
+    background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation02-l.png),
+      url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation02-r.png);
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-size: 15px 96px;
+    margin: 60px auto;
+    padding: 8px 48px;
+    width: 580px;
+
+    &--yellow {
+      font-weight: bold;
+      background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+    }
+
+    &--pink {
+      font-size: 36px;
+    }
+
+    &:before {
+      content: "";
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-check.png)no-repeat;
+      background-size: 50px 50px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+    }
+
+    &:after {
+      content: "";
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/img-reason02-lead.png)no-repeat;
+      background-size: 142px 104px;
+      display: block;
+      width: 142px;
+      height: 104px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 390px;
+    }
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+
+
+  &__center {
+    text-align: center;
+  }
+
+  &__ttl2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    // 3
+    &--pink {
+      color: #ff5089;
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    // つ
+    &--pink-big {
+      font-weight: bold;
+      font-size: 46px;
+      color: #ff5089;
+      letter-spacing: -6px;
+    }
+  }
+
+  &__ttl {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  // リーズン02 カードエリア
+  &__card {
+    display: inline-block;
+    position: relative;
+    margin: 32px;
+    vertical-align: top;
+  }
+
+  &__pic-txt {
+    font-size: 20px;
+    position: absolute;
+    display: block;
+    top: 30px;
+    left: 32px;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+      font-size: 28px;
+    }
+
+    &--newline {
+      position: relative;
+      top: 30px;
+      left: -50px;
+    }
+
+    &--move {
+      left: 256px;
+    }
+  }
+
+  &__box {
+    border: 1px solid #000;
+    max-width: 460px;
+    height: 350px;
+    padding: 3px;
+    text-align: left;
+  }
+
+  &__box-ttl {
+    font-size: 30px;
+    background: pink;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+
+    &--pink {
+      font-weight: bold;
+      color: #ff5089;
+    }
+
+    &--small {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+
+  &__box-txt {
+    border-top: 1px solid #000;
+    font-size: 18px;
+    padding: 16px 0px;
+    margin: 0 30px;
+
+    &--border {
+      border-top: 1px solid #000;
+      width: 84%;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &--yellow {
+      background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+    }
+  }
+
+  &__table {
+    padding: 16px;
+    margin: 16px auto;
+    width: 84%;
+
+  }
+
+  &__table-row {
+    border-bottom: 1px solid #595959;
+  }
+
+  &__table-row:last-child {
+    border-bottom: none;
+
+  }
+
+  &__table-data {
+    padding: 3px;
+    width: 30px;
+    height: 25px;
+    border-right: 1px dotted #595959;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  &__table-data:nth-child(even) {
+    border-right: none;
+  }
+
+
+  // リーズン02 カード1
+  .reason2-card1 {
+    text-align: center;
+    margin: 0 0 64px 0;
+
+    &__body {
+      margin: 0 40px;
+    }
+
+    &__ttl {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 80px;
+      position: relative;
+
+      &--pink {
+        font-weight: bold;
+        color: #ff5089;
+      }
+
+      &:before {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-am.png) no-repeat;
+        background-size: 48px;
+        content: "";
+        display: block;
+        height: 48px;
+        position: relative;
+        top: 40px;
+        left: 0px;
+        width: 48px;
+      }
+
+      &:after {
+        content: "";
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/morning.png)no-repeat;
+        background-size: 232px 52px;
+        display: block;
+        width: 232px;
+        height: 52px;
+        position: absolute;
+        top: 180px;
+        transform: translateY(-50%);
+        left: 40px;
+      }
+    }
+
+    &__body {
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    &__txt {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+
+
+  // リーズン02 カード2
+  .reason2-card2 {
+    text-align: center;
+    margin: 0 0 64px 0;
+
+    &__body {
+      margin: 0 40px;
+    }
+
+    &__ttl {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 80px;
+      position: relative;
+
+      &:before {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-am.png) no-repeat;
+        background-size: 48px;
+        content: "";
+        display: block;
+        height: 48px;
+        position: relative;
+        top: 44px;
+        left: -30px;
+        width: 48px;
+      }
+
+      &:after {
+        content: "";
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/holiday.png)no-repeat;
+        background-size: 117px 55px;
+        display: block;
+        width: 117px;
+        height: 52px;
+        position: absolute;
+        top: 176px;
+        transform: translateY(-50%);
+        left: 90px;
+      }
+    }
+
+    &__body {
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    &__txt {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+
+  // リーズン02 カード3
+  .reason2-card3 {
+    text-align: center;
+    margin: 0 0 64px 0;
+
+    &__body {
+      margin: 0 40px;
+      width: 300px;
+      height: 300px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    &__body-txt {
+      text-align: left;
+      font-size: 16px;
+    }
+
+    &__ttl {
+      font-size: 28px;
+      font-weight: bold;
+
+      &:before {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-am.png) no-repeat;
+        background-size: 48px;
+        content: "";
+        display: block;
+        height: 48px;
+        position: relative;
+        top: 40px;
+        left: -30px;
+        width: 48px;
+      }
+
+      &:after {
+        content: "";
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/afterwork.png)no-repeat;
+        background-size: 176px 46px;
+        display: block;
+        width: 176px;
+        height: 46px;
+        position: relative;
+        top: 20px;
+        transform: translateY(-50%);
+        left: 60px;
+      }
+    }
+  }
+
+  // .reason2-classroom
+  .reason2-classroom {
+    &__ttl1 {
+      font-size: 22px;
+      text-align: center;
+      font-weight: bold;
+      position: relative;
+      margin-top: 120px;
+
+      &:before {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_l.png)no-repeat;
+        background-size: 16px 24px;
+        height: 24px;
+        width: 16px;
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 430px;
+        top: 6px;
+      }
+
+      &:after {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_r.png)no-repeat;
+        background-size: 16px 24px;
+        height: 24px;
+        width: 16px;
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 750px;
+        top: 6px;
+      }
+    }
+
+
+    &__ttl2 {
+      font-size: 40px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &__txt {
+      text-align: center;
+      font-size: 16px;
+      margin: 40px 0;
+    }
+
+    &__txt2 {
+      text-align: left;
+      font-size: 16px;
+      margin-left: 106px;
+      padding: 6px 0;
+    }
+
+    &__list {
+      display: flex;
+      margin: 0 auto;
+      width: 1000px;
+    }
+
+    &__item {
+      display: inline;
+      text-align: center;
+      margin: 0 5px;
+    }
+  }
+
+  // reason02 station
+  .reason2-station {
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-station.jpg)no-repeat center bottom;
+    background-size: cover;
+    margin-top: 64px;
+    height: 724px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:before {
+      border-style: solid;
+      border-color: #fff transparent transparent transparent;
+      border-width: 40px 100px 0 100px;
+      content: "";
+      display: block;
+      height: 0;
+      margin-left: -100px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 0;
+    }
+
+    &__txt-area {
+      background: #ffffff;
+      padding: 32px 16px;
+      margin: 0 auto;
+      text-align: center;
+      width: 520px;
+
+      &:after {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/img-station.png) no-repeat left top;
+        display: block;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 300px;
+        width: 260px;
+        height: 320px;
+      }
+    }
+
+    &__ttl1 {
+      font-size: 16px;
+      position: relative;
+
+      &:before {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-s_l.png)no-repeat;
+        background-size: 14px 24px;
+        content: "";
+        display: block;
+        width: 14px;
+        height: 24px;
+        position: relative;
+        top: 24px;
+        left: 96px;
+      }
+
+      &:after {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/img-reason02-lead.png)no-repeat;
+        background-size: 14px 24px;
+        content: "";
+        display: block;
+        width: 14px;
+        height: 24px;
+        position: relative;
+        left: 374px;
+        top: -24px;
+      }
+    }
+
+    &__ttl2 {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 24px;
+
+      &:after {
+        background-image: linear-gradient(to right, #d3d3d3, #d3d3d3 85.71429%, rgba(0, 0, 0, 0) 85.71429%, rgba(0, 0, 0, 0) 100%);
+        background-size: 6px 6px;
+        content: "";
+        display: block;
+        height: 2px;
+        margin-left: -60px;
+        position: relative;
+        top: 24px;
+        left: 50%;
+        width: 120px;
+      }
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+      }
+
+      &--yellow {
+        font-weight: bold;
+        background: #fff79a;
+        background: -webkit-linear-gradient(transparent 90%, #fff79a 0%);
+        background: linear-gradient(transparent 90%, #fff79a 0%);
+      }
+    }
+
+    &__txt1 {
+      font-size: 20px;
+      font-weight: bold;
+      padding-top: 20px;
+      margin: 0 0 20px 0;
+    }
+
+    &__txt2 {
+      width: 400px;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+  }
+}
+
+// reason3
+.reason3 {
+  &__read {
+    font-size: 24px;
+    position: relative;
+    background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation02-l.png),
+      url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation02-r.png);
+    background-repeat: no-repeat;
+    background-position: left center, right center;
+    background-size: 15px 96px;
+    margin: 60px auto;
+    padding: 8px 48px;
+    width: 580px;
+
+    &--yellow {
+      background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+    }
+
+    &:before {
+      content: "";
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/icon-check.png)no-repeat;
+      background-size: 50px 50px;
+      display: block;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -20px;
+      left: -20px;
+    }
+
+    &:after {
+      content: "";
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/img-reason03-lead.png)no-repeat;
+      background-size: 142px 104px;
+      display: block;
+      width: 142px;
+      height: 104px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 390px;
+    }
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    &--small {
+      font-size: 16px;
+    }
+  }
+
+  &__ttl1 {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    margin-top: 60px;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+
+    &:before,
+    &:after {
+      display: inline-block;
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 24px;
+      top: 44%;
+      transform: translateY(-50%);
+    }
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_l.png) no-repeat;
+      background-size: 16px 24px;
+      left: 390px;
+    }
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-d_r.png)no-repeat;
+      background-size: 16px 24px;
+      right: 390px;
+    }
+  }
+
+  &__ttl2 {
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+      font-size: 56px;
+    }
+  }
+
+  &__ttl3 {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+
+    :before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-s_l.png) no-repeat;
+      background-size: 14px 24px;
+      content: "";
+      display: block;
+      height: 24px;
+      margin-top: -12px;
+      position: absolute;
+      top: 50%;
+      left: 250px;
+      width: 14px;
+    }
+
+    :after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/cheer-s_r.png) no-repeat;
+      background-size: 14px 24px;
+      content: "";
+      display: block;
+      height: 24px;
+      margin-top: -12px;
+      position: absolute;
+      top: 50%;
+      left: 920px;
+      width: 14px;
+    }
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  &__txt1 {
+    max-width: 380px;
+    margin: 20px auto;
+    font-size: 16px;
+  }
+
+  &__image-background {
+    background: repeating-linear-gradient(-45deg, #f4d1db, #f4d1db 5px, #f5d6df 5px, #f5d6df 10px);
+    border-radius: 8px;
+    margin: 0 auto;
+    padding: 24px 56px;
+    width: 680px;
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/img-video.png) no-repeat;
+      background-size: 214px 374px;
+      content: "";
+      display: block;
+      height: 374px;
+      margin-top: -12px;
+      position: absolute;
+      top: 68%;
+      left: 870px;
+      width: 214px;
+    }
+  }
+
+  &__image-txt1 {
+    width: 120px;
+    text-align: center;
+    position: relative;
+    right: -930px;
+    top: -260px;
+    z-index: 10;
+    font-size: 12px;
+    transform: rotate(16deg);
+  }
+
+  .reason3-anytime {
+    background: repeating-linear-gradient(-45deg, #f8b4c4, #f8b4c4 40px, #f9bac9 40px, #f9bac9 80px);
+    padding: 80px 0;
+    position: relative;
+
+    &:before {
+      background: #fff url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-anytime.jpg) no-repeat right top;
+      content: "";
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+    }
+
+    &__txt-area {
+      width: 600px;
+      padding: 56px 40px;
+      background: #ffffff;
+      z-index: 10;
+      position: relative;
+      left: 700px;
+    }
+
+    &__txt1 {
+      font-size: 28px;
+      font-weight: bold;
+      z-index: 10;
+      text-align: center;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+      }
+
+      &:before {
+        background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/catch-anytime.png)no-repeat;
+        background-size: 150px 20px;
+        content: "";
+        display: block;
+        height: 20px;
+        position: relative;
+        left: 180px;
+        width: 150px;
+      }
+    }
+
+    &__txt2 {
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 10;
+      text-align: center;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+        background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+      }
+    }
+
+    &__txt3 {
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 10;
+      text-align: center;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+        background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+      }
+    }
+
+    &__txt4 {
+      font-size: 18px;
+      font-weight: bold;
+      z-index: 10;
+      text-align: center;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+        background: -webkit-linear-gradient(transparent 70%, #fff79a 0%);
+      }
+    }
+
+    &__txt5 {
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 10;
+      text-align: center;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+      }
+    }
+
+    &__list {
+      display: flex;
+      margin: 0 auto;
+    }
+
+    &__item {
+      width: 180px;
+      margin: 40px 0;
+      text-align: center;
+      border-left: dotted 1px #595959;
+
+      &:last-child {
+        border-right: dotted 1px #595959;
+      }
+    }
+
+    &__image1 {
+      width: 100px;
+      text-align: center;
+    }
+  }
+
+  .reason3-event {
+    background: #f2f2f2;
+    padding-bottom: 104px;
+
+    &__txt-area {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 104px 0 30px 0;
+
+    }
+
+    &__ttl1 {
+      font-size: 40px;
+      font-weight: bold;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+      }
+    }
+
+    &__txt1 {
+      font-size: 18px;
+      margin: 10px 0 20px 0;
+      text-align: center;
+    }
+
+    &__txt2 {
+      font-size: 18px;
+      text-align: left;
+    }
+
+    &__txt3 {
+      font-size: 14px;
+      text-align: left !important;
+      margin: 10px 0;
+      display: inline-block;
+      line-height: 26px;
+    }
+  }
+
+  .reason3-dream {
+    background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/grd_white.png),
+      url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-dream.jpg);
+    background-repeat: repeat-x,
+      no-repeat;
+    background-position: left top,
+      center center;
+    background-size: auto,
+      cover;
+    margin-top: 104px;
+    padding-bottom: 216px;
+    position: relative;
+    text-align: center;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 100%;
+      height: 40px;
+      left: 0;
+      bottom: 0;
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-filter2.png) no-repeat center top;
+    }
+
+    &__txt1-image {
+      width: 455px;
+    }
+
+    &__txt2 {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 16px 0px 64px;
+
+      &--big {
+        font-size: 48px;
+        font-weight: bold;
+      }
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+      }
+    }
+
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      width: 200px;
+      background: rgba(241, 145, 164, 0.8);
+      padding: 4px;
+      margin: 0 10px;
+    }
+
+    &__item-area {
+      border: solid 1px #ffffff;
+      color: #ffffff;
+      padding: 40px 0;
+      position: relative;
+    }
+
+    &__item-txt1 {
+      font-size: 18px;
+      padding: 0 0 10px 0;
+    }
+
+    &__item-txt2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-top: 10px;
+
+      &:before {
+        background: #fff;
+        content: "";
+        height: 1px;
+        width: 48px;
+        position: absolute;
+        top: 80px;
+        left: 38%;
+      }
+    }
+  }
+}
+
+// present
+.present {
+  &__txt-area {
+    font-size: 14px;
+    text-align: center;
+    width: 980px;
+    border: solid 4px #eaeaea;
+    margin: 0 auto;
+    padding-bottom: 20px;
+  }
+
+  &__area {
+    text-align: center;
+    margin: 100px 0;
+
+  }
+
+  &__txt1 {
+    font-weight: bold;
+    padding: 20px 0;
+  }
+
+  &__txt2 {
+    font-weight: bold;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+
+    &--red {
+      color: #f00;
+      font-weight: bold;
+    }
+  }
+}
+
+// reasonable
+.reasonable {
+  background: repeating-linear-gradient(-45deg, #f8b4c4, #f8b4c4 40px, #f9bac9 40px, #f9bac9 80px);
+  padding: 64px 0;
+  text-align: center;
+
+  &__ttl {
+    font-size: 40px;
+    font-weight: bold;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  &__txt-area {
+    background: #ffffff;
+    width: 980px;
+    margin: 0 auto;
+    padding: 64px 40px 64px;
+  }
+
+  &__txt {
+    font-size: 16px;
+    padding-top: 40px;
+    text-align: left;
+  }
+}
+
+// instructor
+.instructor {
+  text-align: center;
+  background: #f2f2f2;
+  padding: 96px 0;
+
+  &__ttl1 {
+    font-size: 56px;
+    font-weight: bold;
+    display: inline;
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  &__txt1 {
+    font-weight: bold;
+    font-size: 18px;
+    width: 600px;
+    background: #ffffff;
+    margin: 30px auto;
+    padding: 20px 40px;
+  }
+
+  .slick2 {
+    width: 980px;
+    margin: 0 auto;
+    padding-top: 40px;
+
+    &__image {
+      border: 2px solid #ddd;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .instructor-slick {
+    &__txt-area {
+      background: #ff679a;
+      width: 680px;
+      padding: 24px 40px;
+      border-radius: 8px;
+      margin: 0 auto;
+      color: #fff;
+      position: relative;
+      font-size: 14px;
+
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        bottom: -11px;
+        left: 50%;
+        margin-left: -12px;
+        border-width: 12px 12px 0 12px;
+        border-style: solid;
+        border-color: #ff679a transparent transparent transparent;
+      }
+    }
+  }
+}
+
+// students
+.students {
+  text-align: center;
+  padding: 136px 0 0 0;
+  max-width: 980px;
+  margin: 0 auto;
+
+  &:before {
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/catch-voice.png)no-repeat;
+    content: "";
+    background-size: 135px 32px;
+    height: 32px;
+    width: 135px;
+    position: absolute;
+    left: 50%;
+    margin-left: -68px;
+    margin-top: -40px;
+  }
+
+  &__ttl2 {
+    font-size: 32px;
+    font-weight: bold;
+    display: block;
+
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  // students-body
+  .students-body {
+    text-align: left;
+
+    &:nth-child(odd) {
+      padding: 0px 60px 0px 0px;
+    }
+
+    &:nth-child(even) {
+      padding: 0px 0px 0px 60px;
+    }
+
+    &__txt-school {
+      display: inline;
+      color: #ffffff;
+      font-size: 12px;
+      padding: 2px 10px;
+      margin-right: 12px;
+      background: #ff93ac;
+      border-radius: 12px;
+    }
+
+    &__txt {
+      font-size: 16px;
+    }
+
+    &__txt-name {
+      font-size: 18px;
+      display: inline;
+      font-weight: bold;
+
+      &--small {
+        font-size: 14px;
+      }
+    }
+
+    &__ttl {
+      color: #ff5089;
+      font-size: 26px;
+      font-weight: bold;
+      display: block;
+      border-top: 1px dashed #595959;
+      padding: 6px 0;
+      margin: 12px 0;
+
+      &--pink {
+        color: #ff5089;
+        font-weight: bold;
+      }
+    }
+  }
+
+  // students card
+  &__card1 {
+    padding: 16px;
+    background: #ffeff3;
+    position: relative;
+    margin: 30px 0;
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/voice-corner_top.png)no-repeat;
+      background-size: 48px;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/voice-corner_bottom.png)no-repeat;
+      background-size: 48px;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 296px;
+      left: 933px;
+      z-index: 10;
+    }
+  }
+
+  &__card2 {
+    padding: 16px;
+    background: #ffeff3;
+    position: relative;
+    margin: 60px 0;
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/voice-corner_top.png)no-repeat;
+      background-size: 48px;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+    }
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/voice-corner_bottom.png)no-repeat;
+      background-size: 48px;
+      content: "";
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      top: 256px;
+      left: 933px;
+      z-index: 10;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    position: relative;
+    border: 1px solid #111;
+    background: #ffffff;
+    padding: 32px 48px;
+  }
+
+  &__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #ffd9e3;
+  }
+}
+
+// students-voice
+.students-voice {
+  font-size: 18px;
+  width: 680px;
+  margin: 0 auto;
+  position: relative;
+
+  &:before {
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-othervoice.jpg)no-repeat left top;
+    display: inline-block;
+    content: "";
+    height: 270px;
+    position: absolute;
+    bottom: -161px;
+    left: -170px;
+    width: 144px;
+  }
+
+  &__txt {
+    background: #ffeff3;
+    font-weight: bold;
+    padding: 8px 40px;
+    display: inline-block;
+    width: 300px;
+    font-size: 20px;
+    margin: 10px;
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation03-l.png)no-repeat;
+      background-size: 14px;
+      content: "";
+      position: relative;
+      width: 14px;
+      height: 14px;
+      display: block;
+      top: 0px;
+      left: -30px;
+    }
+
+    &:after {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/quotation03-r.png)no-repeat;
+      background-size: 14px;
+      content: "";
+      position: relative;
+      display: block;
+      width: 14px;
+      height: 14px;
+      top: 0px;
+      left: 238px;
+    }
+
+    &--pink {
+      color: #ff5089;
+      font-weight: bold;
+    }
+  }
+
+  &__other {
+    color: #ff5089;
+    text-decoration: underline;
+    position: relative;
+    font-size: 16px;
+    display: inline-block;
+    margin: 40px 0 96px 0;
+
+    &::before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/arrow-pink_l.png)no-repeat;
+      background-size: 16px;
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: block;
+      left: -20px;
+      top: 5px;
+      position: absolute;
+
+    }
+  }
+}
+
+// flow
+.flow {
+  text-align: center;
+  background: #fad5d3;
+  padding: 136px 0 96px 0;
+
+  &__ttl1 {
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 56px;
+    display: block;
+
+    &:before {
+      background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/catch-flow.png) no-repeat;
+      background-size: 183px 33px;
+      content: "";
+      display: block;
+      height: 33px;
+      margin-left: -92px;
+      position: absolute;
+      top: -48px;
+      left: 50%;
+      width: 183px;
+    }
+
+    &--small {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &:before {
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/catch-flow.png)no-repeat;
+    content: "";
+  }
+
+  &__list {
+    width: 1080px;
+    margin: 0 auto;
+  }
+
+  &__item1 {
+    padding: 24px 40px;
+    position: relative;
+    background: #fff;
+    width: 480px;
+    display: inline-block;
+    margin: 20px;
+
+
+    &:before {
+      background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/step01.png);
+      background-repeat: no-repeat;
+      content: "";
+      background-size: 96px;
+      height: 96px;
+      width: 96px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item2 {
+    padding: 24px 40px;
+    position: relative;
+    background: #fff;
+    width: 480px;
+    display: inline-block;
+    margin: 20px;
+
+    &:before {
+      background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/step02.png);
+      background-repeat: no-repeat;
+      content: "";
+      background-size: 96px;
+      height: 96px;
+      width: 96px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item3 {
+    padding: 24px 40px;
+    position: relative;
+    background: #fff;
+    width: 480px;
+    height: 462px;
+    display: inline-block;
+    margin: 20px;
+
+    &:before {
+      background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/step03.png);
+      background-repeat: no-repeat;
+      content: "";
+      background-size: 96px;
+      height: 96px;
+      width: 96px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item4 {
+    padding: 24px 40px;
+    position: relative;
+    background: #fff;
+    width: 480px;
+    height: 462px;
+    display: inline-block;
+    margin: 20px;
+
+    &:before {
+      background-image: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/step04.png);
+      background-repeat: no-repeat;
+      content: "";
+      background-size: 96px;
+      height: 96px;
+      width: 96px;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__txt2 {
+    text-align: left;
+    display: inline-block;
+    font-size: 14px;
+    width: 980px;
+    padding-top: 16px;
+  }
+
+  &__image {
+    width: 240px;
+    border-radius: 120px;
+  }
+
+  &__subttl {
+    color: #fff;
+    background: #ff93ac;
+    font-size: 15px;
+    padding: 6px 10px;
+    border-radius: 10px;
+    margin: 0 60px;
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+
+    &:after {
+      border-style: solid;
+      border-color: #ff93ac transparent transparent transparent;
+      border-width: 8px 8px 0 8px;
+      content: "";
+      display: block;
+      height: 0;
+      margin-left: -8px;
+      position: absolute;
+      bottom: -7px;
+      left: 50%;
+      width: 0;
+
+    }
+  }
+
+  &__ttl2 {
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+
+    &:after {
+      background: #ff5089;
+      content: "";
+      display: block;
+      height: 2px;
+      margin-left: -20px;
+      position: absolute;
+      top: 36px;
+      left: 50%;
+      width: 40px;
+
+    }
+  }
+
+  &__txt {
+    font-size: 15px;
+    padding-top: 20px;
+    text-align: left;
+  }
+}
+
+.more {
+  background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-perorate.jpg)no-repeat;
+  padding: 140px 0px;
+
+  &__image {
+    margin-left: 300px;
+  }
+
+  &:after {
+    position: relative;
+    display: block;
+    content: "";
+    height: 40px;
+    left: 0;
+    z-index: 100;
+    bottom: -140px;
+    background: url(https://www.linguage-school.jp/wp-content/themes/linguage/img/lp/bg-filter2.png) no-repeat center top;
+  }
+}
+
+.footer {
+  background: #eee;
+  text-align: center;
+  display: block;
+  padding-top: 40px;
+
+  &__list1 {
+    display: flex;
+    width: 220px;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  &__school-list1 {
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+
+  &__school-item1 {
+    padding-right: 24px;
+    border-right: solid 1px #222;
+  }
+
+  &__school-item2 {
+    padding-right: 24px;
+    padding-left: 24px;
+    border-right: solid 1px #222;
+  }
+
+  &__school-item3 {
+    padding-left: 24px;
+  }
+
+  &__school-list2 {
+    display: flex;
+    font-size: 14px;
+    justify-content: center;
+  }
+
+  &__item4 {
+    padding-right: 24px;
+    border-right: solid 1px #222;
+  }
+
+  &__item5 {
+    padding-right: 24px;
+    padding-left: 24px;
+    border-right: solid 1px #222;
+  }
+
+  &__item6 {
+    padding-right: 24px;
+    padding-left: 24px;
+    border-right: solid 1px #222;
+  }
+
+  &__item7 {
+    padding-left: 24px;
+  }
+
+  &__image {
+    margin: 0 auto;
+    display: block;
+    width: 247px;
+    padding: 16px 0 40px;
+  }
+
+  &__copyright {
+    background: #ee7e94;
+    color: #fff;
+    padding: 20px 0;
+  }
+
+  &__line-width {
+    width: 30px;
+  }
+}

@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden !important;
+  margin: auto;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  word-break: break-all;
+	
+/******************************************************************************
+　　 font-familyが 『Yugothic / Roboto』のセットの時は常にbold 
+	※Robotoはlink必須
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+******************************************************************************/
+  font-weight: bold;
+  font-family: "Roboto", "Yu Gothic", YuGothic, sans-serif;
+  
+/*	数値変更可*/
+/*  letter-spacing: .8px;*/
+  background-color: #fff;
+
+
+}
+
+html, body, h1, h2, h3, h4, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, button, article, header, footer, aside, figure, figcaption, nav, section, label, input, select, textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+	
+/*	数値変更可*/
+  color: #222222;
+/*  transition: all .2s;*/
+}
+
+/*flex-box使う場合*/
+header, footer, section {
+	display: flex;
+	justify-content: center;
+}
